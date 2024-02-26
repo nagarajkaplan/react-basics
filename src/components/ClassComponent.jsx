@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { Component } from "react";
 
 class ClassComponent extends Component {
@@ -11,7 +10,7 @@ class ClassComponent extends Component {
   }
   // lifeCycle method for calling api on first load
   componentDidMount() {
-    axios("https://jsonplaceholder.typicode.com/users")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((resp) => {
         this.setState({
